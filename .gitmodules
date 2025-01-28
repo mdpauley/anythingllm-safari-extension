@@ -1,0 +1,3 @@
+[submodule "anythingllm-extension"]
+	path = anythingllm-extension
+	url = https://github.com/Mintplex-Labs/anythingllm-extension
