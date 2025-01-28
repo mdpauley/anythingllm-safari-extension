@@ -1,0 +1,25 @@
+{
+  "name": "anythingllm-safari-extension",
+  "version": "1.0.0",
+  "description": "Connect to your AnythingLLM instance with a simple connection string or automatic browser extension registration.",
+  "type": "module",
+  "scripts": {
+    "preinstall": "rm -rf ./anythingllm-extension \"./AnythingLLM Browser Companion\"",
+    "install": "git submodule update --force --init --recursive && cd ./anythingllm-extension && npm install && npm run build",
+    "postinstall": "xcrun safari-web-extension-converter ./anythingllm-extension/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdpauley/anythingllm-safari-extension.git"
+  },
+  "author": {
+    "name": "Michael Pauley",
+    "email": "michael@mdpauley.com",
+    "url": "https://mdpauley.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdpauley/anythingllm-safari-extension/issues"
+  },
+  "homepage": "https://github.com/mdpauley/anythingllm-safari-extension#readme"
+}
